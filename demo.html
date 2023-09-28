@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script src="https://app-rsrc.getbee.io/plugin/BeePlugin.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+
+<script>
+    var endpoint = "https://auth.getbee.io/apiauth";
+
+    var payload = {
+        client_id: "c97b93c8-aca5-4c1a-9afd-c90ba6da5412", // Enter your client id
+        client_secret: "NozgfkElkpOA3Ub54ybJNtpjMkchcWsNv9YJlcywQ0UzoTPs9oig", // Enter your secret key
+        grant_type: "password" // Do not change
+    };
+
+    $.post(endpoint, payload)
+        .done(function(data) {
+            var token = data;
+            // continue initialization here...
+            console.log("initied");
+            console.log("token", token);
+        });
+</script>
+<body>
+
+
+<div id="bee-plugin-container"></div>
+
+
+</body>
+</html>
